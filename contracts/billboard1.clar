@@ -8,8 +8,8 @@
 (define-data-var billboard-message (string-utf8 500) u"Hello World!")
 
 ;; public functions
-(define-public (get-message)
-    (ok (var-get billboard-message))
+(define-read-only (get-message)
+    (var-get billboard-message)
 )
 
 (define-public (set-message (message (string-utf8 500)))
