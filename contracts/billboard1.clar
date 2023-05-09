@@ -7,11 +7,11 @@
 ;; data maps/vars
 (define-data-var billboard-message (string-utf8 500) u"Hello World!")
 
-;; public functions
 (define-read-only (get-message)
     (var-get billboard-message)
 )
 
+;; public functions
 (define-public (set-message (message (string-utf8 500)))
     (if (var-set billboard-message message)
         (ok true)
